@@ -15,17 +15,21 @@ Things you may want to cover:
 
 user, group, comment
 
-comment-table
-body text
-image string
-group_id integer
-user_id integer
+#comment-table
+|column | type|
+|-------|--------|
+|body | text|
+|image | string|
+|group_id | integer|
+|user_id | integer|
 
-user-table
-name string
+#user-table
+|name |string|
+|email |string|
+|password |string|
 
-group-table
-name string
+#group-table
+|name |string|
 
 * Database initialization
 
