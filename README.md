@@ -13,6 +13,33 @@ Things you may want to cover:
 
 * Database creation
 
+user, group, comment
+
+#comment table
+|column | type|
+|-------|--------|
+|body | text|
+|image | string|
+|group_id | integer|
+|user_id | integer|
+
+#user table
+|column | type|
+|-------|--------|
+|name |string|
+|email |string|
+|password |string|
+
+#group table
+|column | type|
+|-------|--------|
+|name |string|
+
+#user-group table
+|column | type|
+|-------|--------|
+|user_id | integer|
+|group_id | integer|
 * Database initialization
 
 * How to run the test suite
