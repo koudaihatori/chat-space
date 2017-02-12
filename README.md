@@ -24,16 +24,19 @@ user, group, comment
 |user_id | integer|
 
 #user table
+|column | type|
 |-------|--------|
 |name |string|
 |email |string|
 |password |string|
 
 #group table
+|column | type|
 |-------|--------|
 |name |string|
 
 #user-group table
+|column | type|
 |-------|--------|
 |user_id | integer|
 |group_id | integer|
