@@ -15,7 +15,7 @@ Things you may want to cover:
 
 user, group, comment
 
-#comment-table
+#comment table
 |column | type|
 |-------|--------|
 |body | text|
@@ -23,14 +23,20 @@ user, group, comment
 |group_id | integer|
 |user_id | integer|
 
-#user-table
+#user table
+|-------|--------|
 |name |string|
 |email |string|
 |password |string|
 
-#group-table
+#group table
+|-------|--------|
 |name |string|
 
+#user-group table
+|-------|--------|
+|user_id | integer|
+|group_id | integer|
 * Database initialization
 
 * How to run the test suite
