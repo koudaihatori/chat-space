@@ -1,33 +1,25 @@
-
-
-
 .contents
   .sidebar
     .sidetop
-      %p.sidebar_user_name seo
-      %i.fa fa-pencil-square-o 新規投稿
+      %p.sidebar_user_name
+        seo
+        %i.fa.fa-cog
+        %i.fa.fa-pencil-square
     .grouplist
       %p.sidebar_group_name sample
       %p.sidebar_group_chat Good bye world!
-
   .maincontent
     .header
       %div.edit_button Edit
       %p.main_group_name sample
       %p.main_group_member Members: seo neko
-
     .chatcontent
       %div.main_user_date
         seo
         %span
           2016/09/21 06:16:55
       %p.main_chat_content Hello world!
-
     .input_text_area
-      %form{:action => "/", :method => "post"}
+      %form{action: "/", method: "post"}
         %input.form_area{:name => "title", :placeholder => "type a message"}
-        %input.button_area{:name => "send", :type => "submit", :text => "send"}
-
-
-
-
+        %input.button_area{:name => "send", :type => "submit", value: "send"}
