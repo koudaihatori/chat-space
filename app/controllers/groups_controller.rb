@@ -10,6 +10,12 @@ class GroupsController < ApplicationController
 
 
   def create
-    @group = Group.create(name: group_params[:name])
+    Group.create(group_params)
+  end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, {:author_ids => []})
   end
 end
