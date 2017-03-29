@@ -11,11 +11,12 @@ class GroupsController < ApplicationController
 
   def create
     Group.create(group_params)
+    redirect_to controller: :chat_groups, action: :index
   end
 
   private
 
   def group_params
-    params.require(:group).permit(:name, {:author_ids => []})
+    params.require(:group).permit(:name, user_ids: [] << current_user.id)
   end
 end
