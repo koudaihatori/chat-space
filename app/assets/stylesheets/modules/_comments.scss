@@ -1,0 +1,106 @@
+.contents {
+  height: 100vh;
+  width: 100%;
+  .sidebar {
+    height: 100%;
+    width: 300px;
+    float: left;
+    .sidetop {
+      height: 100px;
+      background-color: #253141;
+      .sidebar_user_name{
+        padding: 35px 20px;
+        font-family: Bold;
+        font-size: 16px;
+        color: $white;
+      }
+      .fa {
+        width: 20px;
+        height: 20px;
+        color: white;
+        float: right;
+        padding: 5px;
+      }
+    }
+    .grouplist {
+    background-color: #2f3e51;
+    height: 100%;
+      .sidebar_group_name {
+        padding: 20px 0px 5px 20px;
+        font-size: 15px;
+        color: $white;
+      }
+      .sidebar_group_chat {
+        padding: 0px 0px 40px 20px;
+        font-size: 11px;
+        color: $white;
+      }
+    }
+  }
+  .maincontent {
+    height: 100%;
+    width: calc(100vw - 300px);
+    float: right;
+    .header {
+      height: 100px;
+      background-color: $white;
+      border-bottom: ridge 1px #eeeeee;
+
+      .main_group_name {
+        padding: 35px 0px 15px 40px;
+        color: #333333;
+        font-size: 20px;
+      }
+      .main_group_member {
+        padding: 0px 0px 0px 40px;
+        font-size: 12px;
+        color: $dark_gray;
+      }
+      .edit_button {
+        padding:5px 20px;
+        margin: 30px 40px 30px 0px;
+        border-style: solid; border-color: $light_blue;
+        float: right;
+        color: $light_blue;
+      }
+    }
+    .chatcontent {
+      background-color: #AAAAAA;
+      height: calc(100% - 90px);
+
+      .main_user_date {
+        padding: 28px 0px 10px 40px;
+        font-size: 16px;
+        color: #434A54;
+        span {
+          font-size: 12px;
+          color: $dark_gray;
+        }
+      }
+      .main_chat_content {
+        font-size: 12px;
+        color: #434A54;
+        padding: 0px 0px 40px 40px;
+      }
+    }
+    .input_text_area {
+      height: 90px;
+      background-color: $gray;
+      .form_area {
+        height: 50px;
+        width: 750px;
+        margin: 20px 15px 20px 50px;
+      }
+      .button_area {
+        margin: 20px 40px 20px 0px;
+        background-color: $light_blue;
+        color: white;
+        height: 50px;
+        width: 80px;
+        float: right;
+      }
+    }
+  }
+}
+
+
