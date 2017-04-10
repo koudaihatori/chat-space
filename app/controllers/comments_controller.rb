@@ -1,14 +1,16 @@
 class CommentsController < ApplicationController
   def index
+    @group = Group.find(params[:group_id])
     @comment = Comment.new
   end
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
+      redirect_to :back
     else
       flash.now[:alert] = "グループ作成に失敗しました"
+      redirect_to :back
     end
-    redirect_to :back
   end
 
   private

@@ -1,25 +1,21 @@
-.contents
-  .sidebar
-    .sidetop
-      %p.sidebar_user_name
-        =current_user.name if user_signed_in?
-        %i.fa.fa-cog
-        %i.fa.fa-pencil-square
-    .grouplist
-      %p.sidebar_group_name sample
-      %p.sidebar_group_chat Good bye world!
-  .maincontent
-    .header
-      %div.edit_button Edit
-      %p.main_group_name sample
-      %p.main_group_member Members: seo neko
-    .chatcontent
-      %div.main_user_date
-        seo
-        %span
-          2016/09/21 06:16:55
-      %p.main_chat_content Hello world!
-    .input_text_area
-      =form_for @comment do |f|
-        =f.text_field :text, placeholder: 'type a message', class: 'form_area'
-        =f.submit class: 'button_area', value: "send"
+= render partial: "/templates/left_group_list", locals: {groups: @groups}
+
+
+.maincontent
+  .header
+    .edit_button
+      = link_to "Edit", edit_group_path(@group)
+
+
+    %p.main_group_name sample
+    %p.main_group_member Members: seo neko
+  .chatcontent
+    %div.main_user_date
+      seo
+      %span
+        2016/09/21 06:16:55
+    %p.main_chat_content Hello world!
+  .input_text_area
+    =form_for [@group, @comment] do |f|
+      =f.text_field :text, placeholder: 'type a message', class: 'form_area'
+      =f.submit class: 'button_area', value: "send"
