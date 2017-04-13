@@ -12,7 +12,7 @@
         %p.sidebar_group_name
           = group.name
         - unless group.comments.last.nil?
-          %p.sidebar_group_chat= group.messages.last.body
+          %p.sidebar_group_chat= group.comments.last.text
         - else
           %p.sidebar_group_chat まだメッセージがありません
 

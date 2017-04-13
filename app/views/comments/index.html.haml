@@ -12,11 +12,7 @@
     - @group.users.each do |user|
       %p.main_group_member= user.name
   .chatcontent
-    %div.main_user_date
-      seo
-      %span
-        2016/09/21 06:16:55
-    %p.main_chat_content Hello world!
+    = render @group.comments
   .input_text_area
     =form_for [@group, @comment] do |f|
       =f.text_field :text, placeholder: 'type a message', class: 'form_area'
