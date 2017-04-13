@@ -1,12 +1,8 @@
 = render partial: "/templates/left_group_list", locals: {groups: @groups}
-
-
 .maincontent
   .header
     .edit_button
       = link_to "Edit", edit_group_path(@group)
-
-
     %p.main_group_name= @group.name
     %p.main_group_member Members:
     - @group.users.each do |user|

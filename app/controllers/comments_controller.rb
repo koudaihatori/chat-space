@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @group = Group.find(params[:group_id])
     @comment = Comment.new
   end
+
   def create
     @comment = Comment.new(comment_params)
     if @comment.save

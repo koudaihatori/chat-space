@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
     @group = Group.new
     @group.users << current_user
   end
+
   def edit
   end
 
