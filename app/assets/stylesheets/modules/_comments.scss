@@ -34,22 +34,28 @@
 
   }
   .chatcontent {
-    background-color: #AAAAAA;
+    background-color: $white;
     height: calc(100% - 90px);
+    .chat-comment{
+      padding: 40px 0px 0px 40px;
 
-    .main_user_date {
-      padding: 28px 0px 10px 40px;
-      font-size: 16px;
-      color: #434A54;
-      span {
+      .chat-comment__user {
+        margin: 0px 10px 10px 0px;
+        font-size: 16px;
+        color: #434A54;
+        float: left;
+      }
+      .chat-comment__time {
         font-size: 12px;
         color: $dark_gray;
+        float: left;
       }
-    }
-    .main_chat_content {
-      font-size: 12px;
-      color: #434A54;
-      padding: 0px 0px 40px 40px;
+      .chat-comment__text {
+        font-size: 14px;
+        color: #434A54;
+        padding: 0px 0px 20px 0px;
+        clear: both;
+      }
     }
   }
   .input_text_area {
