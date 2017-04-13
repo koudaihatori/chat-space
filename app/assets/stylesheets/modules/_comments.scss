@@ -12,6 +12,9 @@
       border-style: solid; border-color: $light_blue;
       float: right;
       color: $light_blue;
+      a:link {
+        color: $light_blue;
+      }
       a:visited {
         color: $light_blue;
       }
@@ -26,6 +29,7 @@
       padding: 0px 0px 0px 40px;
       font-size: 12px;
       color: $dark_gray;
+      float: left;
     }
 
   }
