@@ -7,8 +7,10 @@
       = link_to "Edit", edit_group_path(@group)
 
 
-    %p.main_group_name sample
-    %p.main_group_member Members: seo neko
+    %p.main_group_name= @group.name
+    %p.main_group_member Members:
+    - @group.users.each do |user|
+      %p.main_group_member= user.name
   .chatcontent
     %div.main_user_date
       seo

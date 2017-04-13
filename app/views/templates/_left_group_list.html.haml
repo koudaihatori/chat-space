@@ -7,7 +7,12 @@
       = link_to new_group_path, class: "fa" do
         %i.fa.fa-pencil-square
   .grouplist
-    - @groups.each do |group|
-      %p.sidebar_group_name
-        = group.name
-      %p.sidebar_group_chat Good bye world!
+    - current_user.groups.each do |group|
+      =link_to group_comments_path(group) do
+        %p.sidebar_group_name
+          = group.name
+        - unless group.comments.last.nil?
+          %p.sidebar_group_chat= group.messages.last.body
+        - else
+          %p.sidebar_group_chat まだメッセージがありません
+
