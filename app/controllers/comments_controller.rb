@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to :back
     else
-      flash.now[:alert] = "グループ作成に失敗しました"
+      flash.now[:alert] = "メッセージ送信成功しました！"
       redirect_to :back
     end
   end
