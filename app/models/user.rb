@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :user_groups
-  has_many :groups, :through => :user_groups
+  has_many :groups, through: :user_groups
+  has_many :comments
 end
