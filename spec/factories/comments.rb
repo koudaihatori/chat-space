@@ -6,4 +6,5 @@ FactoryGirl.define do
     group_id  "3"
   end
 
+
 end
