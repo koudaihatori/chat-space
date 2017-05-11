@@ -16,30 +16,30 @@ Things you may want to cover:
 user, group, comment
 
 #comment table
-|column | type|
-|-------|--------|
-|body | text|
-|image | string|
-|group_id | integer|
+|column  | type   |
+|:-------|:-------|
+|body    | text   |
+|image   | string |
+|group_id| integer|
 |user_id | integer|
 
 #user table
-|column | type|
-|-------|--------|
-|name |string|
-|email |string|
-|password |string|
+|column  | type  |
+|:-------|-------|
+|name    |string |
+|email   |string |
+|password|string |
 
 #group table
-|column | type|
-|-------|--------|
-|name |string|
+|column | type  |
+|:------|-------|
+|name   |string |
 
 #user-group table
-|column | type|
-|-------|--------|
+|column  | type   |
+|:-------|--------|
 |user_id | integer|
-|group_id | integer|
+|group_id| integer|
 * Database initialization
 
 * How to run the test suite
