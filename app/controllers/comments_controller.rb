@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  rescue_from ActionController::RedirectBackError, with: :redirect_to_default
+
 
   def index
     @group = Group.find(params[:group_id])
@@ -9,10 +9,10 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to :back
+      redirect_to group_comments_path
     else
       flash.now[:alert] = "メッセージ送信成功しました！"
-      redirect_to :back
+      redirect_to group_comments_path
     end
   end
 
@@ -21,7 +21,5 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text).merge(group_id: params[:group_id], user_id: current_user.id)
   end
-  def redirect_to_default
-    redirect_to group_comments_path
-  end
+
 end
