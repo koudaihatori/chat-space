@@ -10,7 +10,6 @@ require 'rails_helper'
 
     describe 'GET #index' do
       before do
-        user = create(:user)
         login_user user
         # controller_macros.rb内のlogin_userメソッドを呼び出し
       end
@@ -34,7 +33,6 @@ require 'rails_helper'
 
     describe 'POST #create' do
       before do
-        user = create(:user)
         login_user user
         # controller_macros.rb内のlogin_userメソッドを呼び出し
       end
