@@ -4,15 +4,16 @@ class CommentsController < ApplicationController
   def index
     @group = Group.find(params[:group_id])
     @comment = Comment.new
+    @comments = Comment.where(group_id: @group.id)
   end
 
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to group_comments_path
+      render :index
     else
       flash.now[:alert] = "メッセージ送信成功しました！"
-      redirect_to group_comments_path
+      render :index
     end
   end
 
