@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      render :index
+      redirect_to group_comments_path
     else
       flash.now[:alert] = "メッセージ送信成功しました！"
       render :index
