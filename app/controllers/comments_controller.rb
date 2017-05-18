@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       respond_to do |format|
         format.html { redirect_to group_comments_path }
-        format.json { render json:@comment}
+        format.json { render json: @comment}
       end
     else
       flash.now[:alert] = "メッセージ送信成功しました！"
