@@ -6,20 +6,20 @@ $(function() {
     ${comment.user_name}
     </div>
     <div class="chat-comment__time">
-    ${comment.reated_at.strftime('%Y年%m月%d日 %H:%M:%S')}
+    ${comment.created_at}
     <div class="chat-comment__text">
     ${comment.text}
     </div>`;
     return html;
   }
-  $('form_area').on('submit', function(e) {
+  $('.input_text_area').on('submit', function(e) {
     e.preventDefault();
-    var form = this;
     var textField = $('#text_field');
     var comment = textField.val();
+
     $.ajax({
       type: 'POST',
-      url: '/comments.json',
+      url: './comments',
       data: {
         comment: {
           text: comment
@@ -28,8 +28,9 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      var html = buildHTML(data);
-      $('list').append(html);
+      // console.log(data)
+      var html = buildHTML(data.comment);
+      $('#list').append(html);
       textField.val('');
     })
     .fail(function() {
