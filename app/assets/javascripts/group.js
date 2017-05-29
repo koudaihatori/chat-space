@@ -18,7 +18,7 @@ $(function(){
     return html;
   };
 
-  $('.chat-group-form__input').on('keyup', '.chat-group-form__input', function(){
+  $('.chat-group-form__search').on('keyup',function(){
     $('#user-search-result').empty();
       var name = $('#user-search-field').val();
       $.ajax ({
