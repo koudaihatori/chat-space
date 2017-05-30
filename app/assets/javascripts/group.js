@@ -28,7 +28,6 @@ $(function(){
         dataType: 'json',
       })
       .done(function(data) {
-        console.log(data)
         var addHtml = "";
         var users = data.users;
         if (name.length !== 0) {
