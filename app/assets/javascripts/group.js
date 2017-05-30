@@ -20,7 +20,7 @@ $(function(){
 
   $('.chat-group-form__search').on('keyup', function(){
     $('#user-search-result').empty();
-      var name = $('#user-search-field').val();
+      var name = $('.chat-group-form__input').val();
       $.ajax ({
         type: 'GET',
         url: '/users/search',
