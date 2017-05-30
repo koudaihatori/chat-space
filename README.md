@@ -15,7 +15,7 @@ Things you may want to cover:
 
 user, group, comment
 
-#comment table
+# comment table
 |column  | type   |
 |:-------|:-------|
 |body    | text   |
@@ -23,19 +23,19 @@ user, group, comment
 |group_id| integer|
 |user_id | integer|
 
-#user table
+# user table
 |column  | type  |
 |:-------|-------|
 |name    |string |
 |email   |string |
 |password|string |
 
-#group table
+# group table
 |column | type  |
 |:------|-------|
 |name   |string |
 
-#user-group table
+# user-group table
 |column  | type   |
 |:-------|--------|
 |user_id | integer|

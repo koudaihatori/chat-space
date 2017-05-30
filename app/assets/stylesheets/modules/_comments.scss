@@ -34,6 +34,7 @@
 
   }
   .chatcontent {
+    overflow: scroll;
     background-color: $white;
     height: calc(100% - 90px);
     .chat-comment{
