@@ -30,7 +30,6 @@ $(function(){
       .done(function(data) {
         var addHtml = "";
         var users = data.users;
-        console.log(name)
         if (name.length !== 0) {
           $.each (users, function(i, user) {
             addHtml += buildHTML(user);
