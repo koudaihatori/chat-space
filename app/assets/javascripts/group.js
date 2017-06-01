@@ -20,7 +20,7 @@ $(function(){
 
   $('.chat-group-form__search').on('keyup', function(){
     $('#user-search-result').empty();
-      var name = $('.chat-group-form__input').val();
+      var name = $('#user-name').val();
       $.ajax ({
         type: 'GET',
         url: '/users/search',
@@ -30,6 +30,7 @@ $(function(){
       .done(function(data) {
         var addHtml = "";
         var users = data.users;
+        console.log(name)
         if (name.length !== 0) {
           $.each (users, function(i, user) {
             addHtml += buildHTML(user);
