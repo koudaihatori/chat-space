@@ -8,7 +8,7 @@ $(function(){
     return html;
   };
 
-  function buildRemove(user) {
+  function AddedUserHtml(user) {
     var html = `<li class='chat-group-user clearfix'>
                   <div class='chat-group-user__name'>${ user.name }</div>
                   <div class='chat-group-user__btn
@@ -45,7 +45,7 @@ $(function(){
   $('#user-search-result').on('click', '.chat-group-user__btn--add', function() {
     var name = $(this).data(name);
     var id = $(this).data(id);
-    var responseHTML = buildRemove(name, id);
+    var responseHTML = AddedUserHtml(name, id);
     $('#chat-group-users').append(responseHTML);
     $('this').parent('.chat-group-form__field--right').remove();
   });
