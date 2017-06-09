@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json
+      format.json { @comments = @comments.where("id > ?", params[:id]) }
     end
   end
 
