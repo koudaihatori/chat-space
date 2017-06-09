@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
     @group = Group.find(params[:group_id])
     @comment = Comment.new
     @comments = Comment.where(group_id: @group.id)
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
