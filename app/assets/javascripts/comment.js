@@ -1,7 +1,9 @@
 $(function() {
+
+
   function buildHTML(comment) {
     var html =
-    `<div class="chat-comment">
+    `<div class="chat-comment" id="${comment.id}">
       <div class="chat-comment__user">
         ${comment.name}
       </div>
@@ -13,6 +15,27 @@ $(function() {
       </div>
     </div>`;
     return html;
+  }
+
+  function autoReload() {
+    var lastCommentId = $('.chat-comment').last().data('id');
+    $.ajax({
+      type: 'GET',
+      url: './comments',
+      data: {
+        id: lastCommentId
+      },
+      dataType: 'json'
+    })
+    .done(function(data) {
+      $.each(data, function(i, comment) {
+        buildHTML(comment);
+      });
+    });
+  }
+
+  if (document.URL.match("/comments")) {
+    setInterval(autoReload, 3000);
   }
 
   $('.input_text_area').on('submit', function(e) {
