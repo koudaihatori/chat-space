@@ -28,8 +28,9 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      $.each(data, function(i, comment) {
-        buildHTML(comment);
+      $.each(data.comments, function(i, comment) {
+        var html = buildHTML(comment);
+        $('#list').append(html);
       });
     });
   }
