@@ -55,3 +55,7 @@ end
   gem 'font-awesome-rails'
   gem 'devise'
   gem 'pry-rails'
+
+group :production do
+  gem 'unicorn'
+end
