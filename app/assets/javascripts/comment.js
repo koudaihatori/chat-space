@@ -1,6 +1,4 @@
 $(function() {
-
-
   function buildHTML(comment) {
     var html =
     `<div class="chat-comment" id="${comment.id}">
