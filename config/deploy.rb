@@ -3,7 +3,6 @@ lock '3.8.1'
 
 set :application, 'chat-space'
 set :repo_url,  'git@github.com:koudaihatori/chat-space.git'
-set :deploy_to, '/var/www/chat-space'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 

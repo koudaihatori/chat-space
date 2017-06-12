@@ -1,4 +1,5 @@
 server '52.68.77.174', user: 'ec2-user', roles: %w{app db web}
+set :ssh_options, keys: '/Users/hatorikoudai/.ssh/key_pair.pem'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
