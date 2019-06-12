@@ -2,9 +2,9 @@ require 'rails_helper'
 
 
   describe CommentsController do
-    let(:user){ create(:user) }
+    let(:user){ create(:user, :name) }
     let(:group) { create(:group) }
-    let(:comment) { create(:comment) }
+    let(:comment) { create(:comment, :name) }
     let(:comments) { create_list(:comment, 5, group_id: group.id)}
 
 

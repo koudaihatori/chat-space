@@ -1,4 +1,4 @@
-= render partial: "/templates/left_group_list", locals: {groups: @groups}
+= render partial: "templates/left_group_list", locals: {groups: @groups}
 .maincontent
   .header
     .edit_button
@@ -13,4 +13,4 @@
   .input_text_area
     =form_for [@group, @comment] do |f|
       =f.text_field :text, placeholder: 'type a message', class: 'form_area', id: "text_field"
-      =f.submit class: 'button_area', value: "send", id: "input"
+      =f.submit class: 'button_area', value: "send", id: "input", data: {disable_with: 'send'}

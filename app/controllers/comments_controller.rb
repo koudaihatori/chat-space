@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 
 
   def index
+    # binding.pry
     @group = Group.find(params[:group_id])
     @comment = Comment.new
     @comments = Comment.where(group_id: @group.id)
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
         format.json
       end
     else
-      flash.now[:alert] = "メッセージ送信成功しました！"
+      flash.now[:alert] = "メッセージ送信失敗しました！"
       render :index
     end
   end
